@@ -163,7 +163,7 @@ h2 {
 /* Assessment */
 .assessment-card {
     background: #1e293b;
-    color: white;
+    color: var(--text-main) ;
     padding: 30px;
     border-radius: 24px;
 }
