@@ -1,0 +1,373 @@
+:root {
+    --uqu-green: #00643c;
+    --uqu-gold: #c5a059;
+
+    --background: #f8fafc;
+    --surface: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --card-bg: #ffffff;
+    --topic-bg: #f1f5f9;
+    --nav-bg: rgba(255, 255, 255, 0.9);
+}
+
+/* ===== Dark Mode ===== */
+body.dark {
+    --background: #0f172a;
+    --surface: #1e293b;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --border: #334155;
+    --card-bg: #1e293b;
+    --topic-bg: #334155;
+    --nav-bg: rgba(15, 23, 42, 0.9);
+}
+
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text-main);
+    line-height: 1.7;
+    padding-top: 90px;
+}
+
+/* ===== Container ===== */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px 60px;
+}
+
+/* ===== Header ===== */
+.header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: var(--nav-bg);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    font-weight: 800;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    color: var(--uqu-green);
+}
+
+body.dark .header-nav { color: var(--uqu-gold); }
+
+/* Header Buttons */
+.nav-btn {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--text-main);
+    transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: var(--uqu-gold);
+    color: black;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    background: linear-gradient(135deg, var(--uqu-green), #004d2e);
+    color: white;
+    padding: 60px 40px;
+    border-radius: 28px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin: 15px 0;
+}
+
+.course-badge {
+    display: inline-block;
+    background: var(--uqu-gold);
+    color: #000;
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-weight: 800;
+}
+
+/* ===== Navigation Menu ===== */
+.course-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0 30px;
+    padding: 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.course-nav a {
+    text-decoration: none;
+    font-weight: 800;
+    color: var(--text-main);
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+}
+
+.course-nav a:hover {
+    background: var(--uqu-gold);
+    color: black;
+    border-color: transparent;
+}
+
+/* ===== Sections ===== */
+section {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 24px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+section h2 {
+    margin-bottom: 18px;
+    color: var(--uqu-gold);
+}
+
+section h3 {
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+/* Lists */
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+ul li { margin-bottom: 8px; }
+
+/* ===== Generic Table ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+table th, table td {
+    border: 1px solid var(--border);
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+table th {
+    background: var(--topic-bg);
+    font-weight: 900;
+}
+
+/* ===== CLO Table ===== */
+.clo-table th, .clo-table td { text-align: start; }
+
+/* ===== Topics Ordered List ===== */
+.topics-list {
+    margin-top: 10px;
+    padding-inline-start: 22px;
+}
+
+.topics-list li {
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    background: var(--topic-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+/* ===== Reference Card ===== */
+.ref-card {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    margin-top: 15px;
+    padding: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.ref-img {
+    width: 130px;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--topic-bg);
+}
+
+.ref-info { flex: 1; }
+
+.ref-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: var(--uqu-gold);
+    color: #000;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.ref-link:hover { transform: translateY(-1px); }
+
+/* ===== Team Page ===== */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-top: 18px;
+}
+
+/* ✅ Grid layout: image column + content column */
+.member-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 14px;
+    padding: 18px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    align-items: start;
+
+    position: relative;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+/* خط فاصل بين الأعضاء */
+.member-card:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--border);
+}
+
+.member-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: var(--topic-bg);
+}
+
+/* النصوص (الأسماء) بالعمود الثاني */
+.member-body {
+    grid-column: 2;
+    min-width: 0;
+}
+
+.member-names {
+    display: grid;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.name-ar,
+.name-en {
+    font-weight: 700;
+}
+
+/* ✅ البريد والـ ID تحت الصورة (عمود 1) */
+.member-meta {
+    grid-column: 1;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ✅ شكل نظيف ومحاذاة يمين */
+.meta-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 12px;
+    background: var(--topic-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-align: right;
+}
+
+.meta-label {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--text-muted);
+}
+
+.meta-value {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+    direction: ltr;
+    text-align: right;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    margin-top: 40px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .hero { padding: 40px 25px; }
+    .hero h1 { font-size: 1.6rem; }
+    .course-nav { flex-direction: column; }
+    .ref-card { flex-direction: column; }
+    .ref-img { width: 160px; }
+}
+
+@media (max-width: 520px) {
+    .member-card {
+        grid-template-columns: 1fr;
+    }
+    .member-body {
+        grid-column: 1;
+    }
+    .member-meta {
+        grid-column: 1;
+    }
+    .member-photo {
+        width: 120px;
+        height: 120px;
+    }
+}
